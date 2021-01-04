@@ -13,7 +13,7 @@ export default function Navigation() {
         <ul>
           <li>
             <Link href="/">
-              <a className={router.pathname === "/" ? "active" : null}>about</a>
+              <a className={router.pathname === "/" ? "active" : null}>home</a>
             </Link>
           </li>
           <li>
@@ -37,10 +37,10 @@ export default function Navigation() {
               opacity: 0;
               width: 100%;
               height: 100vh;
-              text-align: right;
               list-style: none;
               margin: 0;
               padding: 0;
+              margin-left: 1rem;
               position: fixed;
               top: 0;
               background-color: #fff;
