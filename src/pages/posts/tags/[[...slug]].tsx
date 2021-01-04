@@ -20,11 +20,12 @@ type Props = {
 export default function Index({ posts, tag, pagination, page }: Props) {
   const url = `/posts/tags/${tag.name}` + (page ? `/${page}` : "");
   const title = tag.name;
+  const props = { url, title}
   return (
     <Layout>
-      <BasicMeta url={url} title={title} />
-      <OpenGraphMeta url={url} title={title} />
-      <TwitterCardMeta url={url} title={title} />
+      <BasicMeta {...props} />
+      <OpenGraphMeta {...props} />
+      <TwitterCardMeta {...props} />
       <TagPostList posts={posts} tag={tag} pagination={pagination} />
     </Layout>
   );
