@@ -1,10 +1,17 @@
+import { GetStaticProps } from "next";
 import Layout from "../components/Layout";
 import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 import { SocialList } from "../components/SocialList";
+import { PostContent, listPostContent } from "../lib/posts";
+import Link from "next/link";
 
-export default function Index() {
+type Props = {
+  posts: PostContent[];
+};
+
+export default function Index({ posts }: Props) {
   return (
     <Layout>
       <BasicMeta url={"/"} />
@@ -12,11 +19,12 @@ export default function Index() {
       <TwitterCardMeta url={"/"} />
       <div className="container">
         <div>
-          <h1>
-            Hi, We're Next.js & Netlify<span className="fancy">.</span>
-          </h1>
-          <span className="handle">@nextjs-netlify-blog</span>
-          <h2>A blog template with Next.js and Netlify.</h2>
+          <h1>Sigourney Louise</h1>
+          <h2>Capturing the chapters that make up our story. The real side of motherhood.</h2>
+          <h3>Latest post</h3>
+          {posts && posts[0] && <>
+            <p><Link href={"/posts/" + posts[0].slug}><a>{posts[0].title} | {posts[0].date}</a></Link></p>
+          </>}
           <SocialList />
         </div>
       </div>
@@ -27,6 +35,8 @@ export default function Index() {
           justify-content: center;
           flex: 1 1 auto;
           padding: 0 1.5rem;
+          max-width: 800px;
+          margin: 0 auto;
         }
         h1 {
           font-size: 2.5rem;
@@ -60,3 +70,12 @@ export default function Index() {
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = listPostContent(1, 1);
+  return {
+    props: {
+      posts,
+    },
+  };
+};
