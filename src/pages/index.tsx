@@ -6,6 +6,7 @@ import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 import { SocialList } from "../components/SocialList";
 import { PostContent, listPostContent } from "../lib/posts";
 import Link from "next/link";
+import Image from 'next/image'
 
 type Props = {
   posts: PostContent[];
@@ -19,7 +20,11 @@ export default function Index({ posts }: Props) {
       <TwitterCardMeta url={"/"} />
       <div className="container">
         <div>
-          <h1>Sigourney Louise</h1>
+          <Image 
+            src="/images/logo.jpg"
+            width="800"
+            height="372"
+          />
           <h2>Capturing the chapters that make up our story. The real side of motherhood.</h2>
           <h3>Latest post</h3>
           {posts && posts[0] && <>
@@ -37,11 +42,6 @@ export default function Index({ posts }: Props) {
           padding: 0 1.5rem;
           max-width: 800px;
           margin: 0 auto;
-        }
-        h1 {
-          font-size: 2.5rem;
-          margin: 0;
-          font-weight: 500;
         }
         h2 {
           font-size: 1.75rem;
