@@ -2,7 +2,6 @@ import Layout from "../components/Layout";
 import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
-import Image from 'next/image'
 
 export default function Me() {
   const url = "/me";
@@ -17,7 +16,7 @@ export default function Me() {
       <div className="container">
         <div className="about-container">
           <div className="image-container">
-            <Image 
+            <img 
               src="/images/about.jpg"
               width={imageWidth}
               height={1102 / 2}
