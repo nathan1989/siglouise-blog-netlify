@@ -7,12 +7,14 @@ import { SocialList } from "../components/SocialList";
 import { PostContent, listPostContent } from "../lib/posts";
 import Link from "next/link";
 import Image from 'next/image'
+import DateComponent from '../components/Date'
 
 type Props = {
   posts: PostContent[];
 };
 
 export default function Index({ posts }: Props) {
+  const toDate = (d: any) => new Date(d)
   return (
     <Layout>
       <BasicMeta url={"/"} />
@@ -28,7 +30,7 @@ export default function Index({ posts }: Props) {
           <h2>Capturing the chapters that make up our story. The real side of motherhood.</h2>
           <h3>Latest post</h3>
           {posts && posts[0] && <>
-            <p><Link href={"/posts/" + posts[0].slug}><a>{posts[0].title} | {posts[0].date}</a></Link></p>
+            <p><Link href={"/posts/" + posts[0].slug}><a>{posts[0].title} | <DateComponent date={toDate(posts[0].date)} /></a></Link></p>
           </>}
           <SocialList />
         </div>
