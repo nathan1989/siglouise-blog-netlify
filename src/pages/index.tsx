@@ -23,8 +23,7 @@ export default function Index({ posts }: Props) {
         <div>
           <img 
             src="/images/logo.jpg"
-            width="800"
-            height="372"
+            className={'logo'}
           />
           <h2>Capturing the chapters that make up our story. The real side of motherhood.</h2>
           <h3>Latest post</h3>
@@ -43,6 +42,10 @@ export default function Index({ posts }: Props) {
           padding: 0 1.5rem;
           max-width: 800px;
           margin: 0 auto;
+        }
+        .logo {
+          max-width: 100%;
+          height: auto;
         }
         h2 {
           font-size: 1.75rem;
@@ -65,6 +68,9 @@ export default function Index({ posts }: Props) {
           }
           h2 {
             font-size: 2.25rem;
+          }
+          .logo {
+            max-width: 769px;
           }
         }
       `}</style>
