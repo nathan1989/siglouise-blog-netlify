@@ -6,7 +6,6 @@ import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 import { SocialList } from "../components/SocialList";
 import { PostContent, listPostContent } from "../lib/posts";
 import Link from "next/link";
-import Image from 'next/image'
 import DateComponent from '../components/Date'
 
 type Props = {
@@ -22,7 +21,7 @@ export default function Index({ posts }: Props) {
       <TwitterCardMeta url={"/"} />
       <div className="container">
         <div>
-          <Image 
+          <img 
             src="/images/logo.jpg"
             width="800"
             height="372"
