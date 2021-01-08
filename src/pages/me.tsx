@@ -20,6 +20,7 @@ export default function Me() {
               src="/images/about.jpg"
               width={imageWidth}
               height={1102 / 2}
+              className="image"
             />
           </div>
           <div>
@@ -48,6 +49,9 @@ export default function Me() {
           margin-bottom: 15px;
           height: 200px;
           overflow: hidden;
+        }
+        .image {
+          max-width: 100%;
         }
         @media (min-width: 769px) {
           .about-container {
