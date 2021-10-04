@@ -1,13 +1,15 @@
 tags:
-  - slug: document
-    name: document
-  - slug: mock
-    name: mock
-  - slug: style
-    name: style
-  - slug: license
-    name: license
-  - slug: mdx
-    name: mdx
-  - slug: markdown
-    name: markdown
+  - slug: living
+    name: living
+  - slug: travel
+    name: travel
+  - slug: mason-rawiri
+    name: Mason Rawiri
+  - slug: motherhood
+    name: motherhood
+  - slug: reviews
+    name: Reviews
+  - slug: wedding
+    name: wedding
+  - slug: nikau-james
+    name: Nikau James
