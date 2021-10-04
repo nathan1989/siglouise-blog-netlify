@@ -1,7 +1,7 @@
 {
   "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Next.js Netlify Blog",
-  "site_description": "Next.js blog template for Netlify",
+  "site_title": "sigourneylouise",
+  "site_description": "Capturing the chapters that make up our story. The real side of motherhood.",
   "site_keywords": [
     {
       "keyword": "Next.js"
@@ -14,5 +14,7 @@
     }
   ],
   "posts_per_page": 5,
-  "instagram_account": "sigourney_louise"
+  "instagram_account": "sigourney_louise",
+  "github_account": "https://github.com/nathan1989",
+  "twitter_account": "https://twitter.com/ImYourNate"
 }
